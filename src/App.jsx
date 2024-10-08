@@ -1,6 +1,5 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom';
-import logo from './assets/logo-white.png'
 import Navigation from "./components/navigation/Navigation.jsx";
 import Home from "./pages/home/Home.jsx";
 import NewPost from "./pages/newpost/NewPost.jsx";
@@ -21,7 +20,7 @@ function App() {
                 <Route path="/newpost" element={<NewPost/>}/>
                 <Route path="/posts" element={<Overview/>}/>
                 <Route path="/posts/:id" element={<PostDetailPage/>}/>
-                <Route path="/notfound" element={<NotFound/>}/>
+                <Route path="/*" element={<NotFound/>}/>
             </Routes>
             </main>
             <footer className={'footer-navigation outer-content-container'}>
@@ -29,7 +28,7 @@ function App() {
             </footer>
 
 
-            {/*<img src={logo} alt="Company logo"/>*/}
+
 
 
         </>
